@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategorispil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kategorispil</h1>
+        <!-- Skærm for at vælge kategorier -->
+        <div id="category-setup-screen">
+            <h2>Vælg 5 kategorier</h2>
+            <input type="text" id="category1" placeholder="Kategori 1">
+            <input type="text" id="category2" placeholder="Kategori 2">
+            <input type="text" id="category3" placeholder="Kategori 3">
+            <input type="text" id="category4" placeholder="Kategori 4">
+            <input type="text" id="category5" placeholder="Kategori 5">
+            <button id="start-game-btn">Start Spil</button>
+        </div>
+
+        <!-- Spilskærm -->
+        <div id="game-screen" style="display: none;">
+            <div id="letter-display">Rundens bogstav: <span id="current-letter"></span></div>
+            <div id="timer-display">Tid tilbage: <span id="time-left"></span></div>
+            <table id="game-table">
+                <!-- Tabeller for spillere vil blive dynamisk tilføjet her -->
+            </table>
+            <button id="submit-btn" style="display: none;">Indsend svar</button>
+        </div>
+
+        <!-- Resultatskærm -->
+        <div id="results-screen" style="display: none;">
+            <h2>Runde resultat</h2>
+            <table id="results-table">
+                <!-- Resultater vil blive dynamisk tilføjet her -->
+            </table>
+            <button id="next-round-btn">Næste runde</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
